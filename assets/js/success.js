@@ -46,5 +46,7 @@ const setItemHTML = (name, value) => {
 }
 
 for (let key in participantData) {
-  setItemHTML(key, participantData[key]);
+  if (participantData[key]) {
+    setItemHTML(key, participantData[key]);
+  }
 }
