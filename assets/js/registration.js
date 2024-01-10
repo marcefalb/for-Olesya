@@ -119,7 +119,7 @@ const registerParticipant = () => {
     };
     
     localStorage.setItem('new_participant', JSON.stringify(participant));
-    window.open('/success.html', '_blank');
+    window.open('success.html', '_blank');
   }
 }
 sendButton.addEventListener('click', registerParticipant);
