@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	padding: 40px 0;
+	
+	overflow: auto;
+	
+	background-color: #f2f2f2;
+}
+.wrapper {
+	max-width: 720px;
+	width: 100%;
+	
+	padding: 20px;
+	
+	margin: 0 auto;
+	
+	background-color: #fff;
+	border-radius: 8px;
+}
+h1 {
+	font-size: 32px;
+	text-align: center;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	
+	max-width: 560px;
+	width: 100%;
+	
+	margin: 40px auto 0 auto;
+}
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	
+	width: 100%;
+}
+.field.hide {
+	display: none;
+}
+
+.validation {
+	display: none;
+	color: rgba(255, 123, 123, 0.93);
+}
+.error {
+	display: block;
+}
+
+.field input[type="text"] {
+	width: 100%;
+	
+	padding: 8px 16px;
+	
+	border: 1px solid rgba(45, 45, 45, 0.4);
+	border-radius: 8px;
+}
+.field input[type="text"]:placeholder-shown {
+	border-color: rgba(45, 45, 45, 0.2);
+}
+.field select {
+	width: 100%;
+	
+	padding: 8px 16px;
+	
+	border: 1px solid rgba(45, 45, 45, 0.4);
+	border-radius: 8px;
+}
+.title {
+	font-size: 16px;
+}
+.has-report {
+	position: relative;
+	display: inline-block;
+	width: 54px;
+	height: 28px;
+}
+.has-report input {
+	 opacity: 0;
+	 width: 0;
+	 height: 0;
+ }
+.switch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background-color: #ccc;
+	cursor: pointer;
+	border-radius: 24px;
+	
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.switch:before {
+	content: "";
+	
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	left: 4px;
+	bottom: 4px;
+	
+	background-color: white;
+	border-radius: 24px;
+	
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .switch {
+	background-color: #2196F3;
+}
+
+input:focus + .switch {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .switch:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded switchs */
+.switch.round {
+	border-radius: 34px;
+}
+
+.switch.round:before {
+	border-radius: 50%;
+}
+
+.send {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	max-width: 560px;
+	width: 100%;
+	height: 34px;
+	
+	margin: 20px auto 0 auto;
+	
+	background-color: #2196F3;
+	color: #fff;
+	border-radius: 8px;
+	cursor: pointer;
+	
+	transition: .30s ease-in-out;
+}
+.send:hover {
+	opacity: .7;
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	   content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Регистрация участников конференции</title>
+	
+	<link rel="stylesheet" href="./assets/styles/normalize.css">
+	<link rel="stylesheet" href="./assets/styles/registration.css">
+	
+	<script src="./assets/js/registration.js" defer></script>
+</head>
+<body>
+	<main class="main">
+		<div class="wrapper">
+			<h1>Регистрация участников конференции</h1>
+			
+			<form class="form">
+				<div class="field">
+					<label class="title" for="name">Имя</label>
+					<input type="text" name="name" id="name" placeholder=" " required value="авыа">
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label for="surname">Фамилия</label>
+					<input type="text" name="surname" id="surname" placeholder=" " required value="авыа">
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label class="title" for="patronymicName">Отчество</label>
+					<input type="text" name="patronymicName" id="patronymicName" placeholder=" " required value="авыа">
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label class="title" for="phone">Контактный телефон</label>
+					<input type="text" name="phone" id="phone" placeholder=" " required value="+79040231401">
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label class="title" for="email">Почта</label>
+					<input type="text" name="email" id="email" placeholder=" " required value="mail@mail.ru">
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label class="title" for="conferences">Секции конференций</label>
+					<select id="conferences" name="conferences">
+						<option value="Математика">Математика</option>
+						<option value="Физика">Физика</option>
+						<option value="Информатика">Информатика</option>
+					</select>
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label class="title" for="birthday">Дата рождения</label>
+					<input type="text" name="birthday" id="birthday" placeholder=" " value="авыа">
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field">
+					<label class="title">Доклад</label>
+					<label class="has-report">
+						<input type="checkbox" name="hasReport" id="hasReport" checked>
+						<span class="switch"></span>
+					</label>
+					<span class="validation"></span>
+				</div>
+				
+				<div class="field hide">
+					<label class="title" for="reportName">Тема доклада</label>
+					<input type="text" name="reportName" id="reportName" placeholder=" " value="авыа">
+					<span class="validation"></span>
+				</div>
+			</form>
+			
+			<button type="submit" class="send">Отправить</button>
+		</div>
+	</main>
+</body>
+</html>
