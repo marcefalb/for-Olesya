@@ -45,7 +45,7 @@ const setItemHTML = (name, value) => {
   }
 }
 
-fetch('/index.html')
+fetch('./index.html')
   .then(response => response.json())
   .then(data => {
     for (let key in data) {
