@@ -1,4 +1,4 @@
-let participantData;
+const participantData = JSON.parse(localStorage.getItem('new_participant'));
 const list = document.querySelector('.list');
 
 const getItemHTML = (title, value) => `
@@ -45,10 +45,6 @@ const setItemHTML = (name, value) => {
   }
 }
 
-fetch('index.html')
-  .then(response => response.json())
-  .then(data => {
-    for (let key in data) {
-      setItemHTML(key, data[key]);
-    }
-  });
+for (let key in participantData) {
+  setItemHTML(key, participantData[key]);
+}
