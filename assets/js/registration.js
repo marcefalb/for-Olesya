@@ -118,14 +118,14 @@ const registerParticipant = () => {
       reportName: reportName.value,
     };
     
-    fetch('./success.html', {
+    fetch('success.html', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(participant),
     })
-      .then(() => window.open('./success.html', '_blank'));
+      .then(() => window.open('success.html', '_blank'));
   }
 }
 sendButton.addEventListener('click', registerParticipant);

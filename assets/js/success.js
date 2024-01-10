@@ -45,7 +45,7 @@ const setItemHTML = (name, value) => {
   }
 }
 
-fetch('./assets/js/registration.js')
+fetch('index.html')
   .then(response => response.json())
   .then(data => {
     for (let key in data) {
