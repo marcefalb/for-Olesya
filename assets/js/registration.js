@@ -11,7 +11,7 @@ const checkIsEmailValid = (value) => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 };
 const checkIsReportNameFilled = (value) => {
-  return hasReportField.checked && value;
+  return hasReportField.checked && value || !hasReportField.checked;
 };
 
 const setValidationError = (fieldNode) => {
