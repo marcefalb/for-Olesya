@@ -106,7 +106,7 @@ const registerParticipant = () => {
   });
   
   if (!hasErrors) {
-    const [name, surname, patronymicName, phone, email, conferences, birthday, reportName] = document.querySelectorAll('.field input, .field select');
+    const [name, surname, patronymicName, phone, email, conferences, birthday, hasReport, reportName] = document.querySelectorAll('.field input, .field select');
     const participant = {
       name: name.value,
       surname: surname.value,
@@ -115,7 +115,7 @@ const registerParticipant = () => {
       email: email.value,
       conferences: conferences.value,
       birthday: birthday.value,
-      reportName: reportName.value,
+      reportName: hasReport ? reportName.value : '',
     };
     
     localStorage.setItem('new_participant', JSON.stringify(participant));
